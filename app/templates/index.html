@@ -1,0 +1,22 @@
+<!doctype html>
+<html lang="en">
+<head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Shelf / Retail vision lab</title><link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}"><script src="{{ url_for('static', filename='app.js') }}" defer></script></head>
+<body>
+<header><a class="brand" href="/" aria-label="Shelf home"><span class="mark">▤</span> shelf<span class="brand-dot">.</span></a><span class="header-note">RETAIL VISION LAB</span><span id="health" class="status">Connecting…</span></header>
+<main>
+<section class="intro"><div><p class="eyebrow">COMPUTER VISION / SHELF ANALYSIS</p><h1>A clearer view<br>of what's <em>missing.</em></h1><p class="lede">Find possible shelf gaps in a single image.<br>Texture analysis meets product detection.</p></div><aside class="method"><span class="small-label">THE METHOD</span><div><b>01</b><span>Find low-texture regions</span></div><div><b>02</b><span>Locate shelf products</span></div><div><b>03</b><span>Combine the evidence</span></div><p>An experimental vision tool.<br>Every estimate deserves a closer look.</p></aside></section>
+<section class="workspace" aria-label="Shelf image analyzer">
+<div class="section-title"><h2>Analyze a shelf</h2><span>IMAGE WORKSPACE <span class="tiny-dot"></span></span></div>
+<div class="workspace-grid">
+<div class="input-panel"><div class="panel-label"><span>01 / INPUT IMAGE</span><span>JPG · PNG · WEBP</span></div>
+<form id="analyze-form"><label id="drop-zone" class="drop-zone" for="image-input"><span class="upload-icon">↥</span><strong>Bring your shelf into focus</strong><span>Choose an image or drop it here</span><small>Up to {{ max_mb }} MB · Crop to the shelf for a better estimate</small><input id="image-input" type="file" accept="image/jpeg,image/png,image/webp" required></label>
+<div id="preview-wrap" class="preview-wrap" hidden><img id="preview" alt="Your selected shelf image"><div><span id="filename"></span><button id="change-image" type="button" class="text-button">Change image</button></div></div>
+<button id="analyze-button" class="primary" type="submit" disabled>Analyze shelf <span>↗</span></button></form><p id="message" role="status" aria-live="polite">Your image is processed locally by this Flask service.</p></div>
+<div class="output-panel"><div class="panel-label"><span>02 / ANALYSIS</span><span id="result-mode">AWAITING IMAGE</span></div><div id="empty-output" class="empty-output"><div class="shelf-illustration" aria-hidden="true"><i></i><i></i><i></i><i></i><i></i><i></i></div><h3>Space tells a story.</h3><p>Your annotated shelf will appear here.</p></div><div id="output-wrap" hidden><img id="output" alt="Analyzed shelf: teal product boxes and amber candidate gap regions"><div class="legend"><span><i class="teal"></i> Products</span><span><i class="amber"></i> Possible gaps</span><a id="download" download="shelf-analysis.jpg">Save image ↗</a></div></div></div>
+</div>
+<div class="stats"><div><span>PRODUCTS DETECTED</span><strong id="products">—</strong><small id="product-note">Requires product model</small></div><div><span>POSSIBLE GAPS</span><strong id="gaps">—</strong><small id="raw-gaps">After occupancy suppression</small></div><div><span>ESTIMATED EMPTY AREA</span><strong id="area">—</strong><small>Share of analyzed image pixels</small></div><div><span>PROCESSING TIME</span><strong id="latency">—</strong><small>Detection + fusion + annotation</small></div></div>
+</section>
+<section class="caveat"><span>ⓘ</span><p><b>A visual estimate, not an inventory count.</b> Plain packaging, shadows, reflections and shelf labels can look like gaps. Review the overlay before drawing conclusions. Uploads are not used for training.</p></section>
+<details id="diagnostics" hidden><summary>Inspect analysis JSON</summary><pre id="json"></pre></details>
+</main><footer><span>SHELF / REAL-TIME RETAIL SHELF MONITORING</span><span>OpenCV + YOLOv8 <span class="footer-sep">/</span> Portfolio research demo</span></footer>
+</body></html>
