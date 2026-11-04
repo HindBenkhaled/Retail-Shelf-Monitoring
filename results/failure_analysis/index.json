@@ -1,0 +1,53 @@
+{
+  "note": "Qualitative review artifacts, no gap ground truth or accuracy score",
+  "images": [
+    {
+      "source_file": "test_00000.jpg",
+      "mode": "hybrid",
+      "products_detected": 71,
+      "raw_gap_count": 27,
+      "gap_count": 22,
+      "estimated_empty_area_percentage": 18.9396
+    },
+    {
+      "source_file": "test_00001.jpg",
+      "mode": "hybrid",
+      "products_detected": 39,
+      "raw_gap_count": 27,
+      "gap_count": 26,
+      "estimated_empty_area_percentage": 4.4711
+    },
+    {
+      "source_file": "test_00002.jpg",
+      "mode": "hybrid",
+      "products_detected": 61,
+      "raw_gap_count": 22,
+      "gap_count": 18,
+      "estimated_empty_area_percentage": 7.7164
+    },
+    {
+      "source_file": "test_00003.jpg",
+      "mode": "hybrid",
+      "products_detected": 54,
+      "raw_gap_count": 8,
+      "gap_count": 7,
+      "estimated_empty_area_percentage": 0.6165
+    },
+    {
+      "source_file": "test_00004.jpg",
+      "mode": "hybrid",
+      "products_detected": 101,
+      "raw_gap_count": 23,
+      "gap_count": 21,
+      "estimated_empty_area_percentage": 14.8188
+    },
+    {
+      "source_file": "test_00005.jpg",
+      "mode": "hybrid",
+      "products_detected": 57,
+      "raw_gap_count": 10,
+      "gap_count": 9,
+      "estimated_empty_area_percentage": 4.4169
+    }
+  ]
+}
