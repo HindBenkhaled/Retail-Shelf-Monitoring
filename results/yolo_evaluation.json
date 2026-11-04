@@ -1,0 +1,29 @@
+{
+  "configuration": {
+    "data": "data/sku110k/dataset.yaml",
+    "weights": "models/shelf_yolov8n.pt",
+    "split": "test",
+    "imgsz": 416,
+    "device": "cpu",
+    "batch": 4,
+    "output": "results/yolo_evaluation.json"
+  },
+  "environment": {
+    "python": "3.12.6",
+    "platform": "Windows-11-10.0.26200-SP0",
+    "processor": "Intel64 Family 6 Model 154 Stepping 3, GenuineIntel",
+    "packages": {
+      "torch": "2.14.0",
+      "ultralytics": "8.4.146",
+      "opencv-python": "5.0.0.93",
+      "numpy": "2.4.1",
+      "Flask": "3.1.3",
+      "Pillow": "11.1.0"
+    }
+  },
+  "precision": 0.488696368473387,
+  "recall": 0.40644431882419446,
+  "mAP50": 0.36243315476535204,
+  "mAP50_95": 0.14549160042685064,
+  "note": "Product bounding boxes only; no gap ground truth. Small subset evaluation."
+}

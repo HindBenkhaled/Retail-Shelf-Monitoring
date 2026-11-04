@@ -1,0 +1,25 @@
+{
+  "data": "data/sku110k/dataset.yaml",
+  "model": "yolov8n.pt",
+  "epochs": 8,
+  "imgsz": 416,
+  "batch": 4,
+  "device": "cpu",
+  "seed": 42,
+  "threads": 4,
+  "name": "cpu_feasibility",
+  "environment": {
+    "python": "3.12.6",
+    "platform": "Windows-11-10.0.26200-SP0",
+    "processor": "Intel64 Family 6 Model 154 Stepping 3, GenuineIntel",
+    "packages": {
+      "torch": "2.14.0",
+      "ultralytics": "8.4.146",
+      "opencv-python": "5.0.0.93",
+      "numpy": "2.4.1",
+      "Flask": "3.1.3",
+      "Pillow": "11.1.0"
+    }
+  },
+  "dataset_manifest_sha256": "e7ca4fc5ac1a0f91fe6b30ed12604003d7340b77cc36804a08894197439d8e12"
+}
