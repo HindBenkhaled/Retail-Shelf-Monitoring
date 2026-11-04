@@ -1,0 +1,6 @@
+{
+  "files_checked": 59,
+  "credential_or_artifact_findings": [],
+  "broken_local_links": [],
+  "scope": "Basic pattern scan; cannot prove absence of every secret. External references researched separately."
+}
